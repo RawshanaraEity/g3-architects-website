@@ -16,13 +16,14 @@
   border: none;
   cursor: pointer;
 }
-
-
+.text-light-gray {
+  color: #727272;
+}
 
 /* header styles */
 header {
   background: rgba(255, 144, 14, 0.1);
-  padding: 50px 240px;
+  padding: 50px 100px;
 }
 nav {
   display: flex;
@@ -49,7 +50,9 @@ nav li a {
 }
 
 /* banner styles */
-
+.banner {
+  max-width: 1440px;
+}
 .banner-content {
   max-width: 800px;
   text-align: center;
@@ -60,38 +63,80 @@ nav li a {
   font-size: 4rem;
   font-weight: 700;
 }
-.banner-info {
-  color: #727272;
+
+.banner img {
+  margin-top: 30px;
+  width: 100%;
 }
-.banner img{
-    margin-top: 30px;
+
+/* main styles */
+main {
+  max-width: 1140px;
+  padding: 50px 100px;
+  margin: 0px auto;
+}
+/* teams style */
+.teams-container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+}
+.team-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.team-img-container img {
     width: 100%;
 }
-
-
-
-
-
-
-
+.teams-content {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+.teams-title {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #727272;
+}
+.teams-title .of-our {
+  color: #131313;
+  font-weight: 700;
+}
+.teams-title .text-feature {
+  color: #ff900e;
+  font-weight: 700;
+}
 
 /* responsive media queries */
 /* mobile devices */
-@media  screen and (max-width:576px) {
-    header{
-        padding: 20px;
-    }
-    nav{
-        flex-direction: column;
-    }
-
+@media screen and (max-width: 576px) {
+  header {
+    padding: 20px;
+  }
+  nav{
+    flex-direction: column;
+  }
+  .teams-container,.team-img-container{
+    grid-template-columns: 1fr;
+  }
+  .teams-content{
+    padding: 0;
+  }
 }
+
+
+
+
+
 /* tablet or medium devices */
-@media screen and (min-width:576px) and (max-width:960px) {
-    header{
-        padding: 50px;
-    }
-    nav {
-        flex-direction: column;
-    }
+@media screen and (min-width: 576px) and (max-width: 960px) {
+  header {
+    padding: 50px;
+  }
+  nav {
+    flex-direction: column;
+  }
+  .teams-container{
+    grid-template-columns: 1fr;
+  }
 }
