@@ -139,15 +139,22 @@ main {
   header {
     padding: 20px;
   }
-  nav {
+  nav, .facts-card-container{
     flex-direction: column;
   }
   .teams-container,
   .team-img-container {
     grid-template-columns: 1fr;
   }
-  .teams-content {
+  main{
     padding: 0;
+  }
+  .teams-content,.teams-container, .facts{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .facts-card-container{
+    gap: 20px;
   }
 }
 
@@ -161,5 +168,12 @@ main {
   }
   .teams-container {
     grid-template-columns: 1fr;
+  }
+  .teams-content{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .facts-card-container{
+    gap: 10px;
   }
 }
